@@ -21,7 +21,7 @@ final class LoaderView: UIView {
         isHidden = false
         let rotation = CABasicAnimation(keyPath: "transform.rotation")
         rotation.fromValue = 0
-        rotation.toValue = 4 * Double.pi
+        rotation.toValue = 2 * Double.pi
         rotation.duration = 1
         rotation.repeatCount = .infinity
         loaderImage.layer.add(rotation, forKey: "spin")
