@@ -34,10 +34,12 @@ final class DetailsViewController: UIViewController {
     
     private func configureView(with model: DetailsViewModel) {
         descriptionLabel.text = model.description
-        guard let image = model.image else { return }
-        itemImageView.image = .init(data: image)
-        guard let backgroundColor = model.backgroundColor else { return }
-        containerView.backgroundColor = backgroundColor
+        if let image = model.image {
+            itemImageView.image = .init(data: image)
+        }
+        if let backgroundColor = model.backgroundColor {
+            containerView.backgroundColor = backgroundColor
+        }
     }
 }
     
